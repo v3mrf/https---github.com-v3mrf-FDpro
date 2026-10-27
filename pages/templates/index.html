@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Nannies - Home{% endblock %}
+
+{% block content %}
+
+<h2>Welcome to Nannies</h2>
+
+<p>
+    Find trusted babysitters and book
+    childcare services by the hour.
+</p>
+
+<h2>Our Pages</h2>
+
+<ol>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">Our Nannies</a></li>
+    <li><a href="{% url 'services' %}">Reviews</a></li>
+    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+    <li><a href="{% url 'register' %}">Register</a></li>
+</ol>
+
+{% endblock %}

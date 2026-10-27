@@ -1,0 +1,68 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - Nannies</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<header class="site-header">
+    <h1>Nannies</h1>
+
+   {% include 'nav.html' %}
+</header>
+
+<main>
+    <h2>Customer Reviews</h2>
+    <p>Read what our customers say about our nannies.</p>
+
+    <div class="reviews">
+
+        <div class="review-card">
+            <h3>Um Ahmed</h3>
+            <img src="{% static 'um-ahmed.png' %}"
+                 alt="Um Ahmed">
+            <p>★★★★★</p>
+            <p>
+                Excellent service. The nanny was professional,
+                kind, responsible, and very good with my children.
+            </p>
+        </div>
+
+        <div class="review-card">
+            <h3>Um Khaled</h3>
+            <img src="{% static 'um-khaled.png' %}"
+                 alt="Um Khaled">
+            <p>★★★★★</p>
+            <p>
+                Great experience. The nanny was friendly,
+                professional, and arrived on time.
+            </p>
+        </div>
+
+        <div class="review-card">
+            <h3>Um Abdullah</h3>
+            <img src="{% static 'um-abdullah.png' %}"
+                 alt="Um Abdullah">
+            <p>★★★★★</p>
+            <p>
+                Wonderful service. The nanny was caring,
+                patient, and excellent with the children.
+            </p>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Nannies. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

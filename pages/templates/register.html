@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nannies - Register</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>Create an Account</h1>
+
+{% include 'nav.html' %}
+</header>
+
+<main>
+
+   
+
+    <p>Register to start using Nannies.</p>
+
+    <form>
+
+        <label for="fullname">Full Name:</label>
+        <br>
+        <input type="text"
+               id="fullname"
+               name="fullname"
+               required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <br>
+        <input type="email"
+               id="email"
+               name="email"
+               required>
+
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <br>
+        <input type="tel"
+               id="phone"
+               name="phone"
+               required>
+
+        <br><br>
+
+        <label for="password">Password:</label>
+        <br>
+        <input type="password"
+               id="password"
+               name="password"
+               required>
+
+        <br><br>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <br>
+        <input type="password"
+               id="confirm-password"
+               name="confirm-password"
+               required>
+
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+    <p>
+        Already have an account?
+        <a href="login.html">Login here</a>
+    </p>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Nannies. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>
