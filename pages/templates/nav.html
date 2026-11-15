@@ -1,8 +1,13 @@
-    <nav>
-        <a href="index.html">Our Home</a> |
-        <a href="nanies.html">Our Nannies</a> |
-        <a href="Reviews.html">Reviews</a> |
-        <a href="Contact Us.html">Contact Us</a> |
-        <a href="login.html">Login</a> |
-        <a href="register.html">Register</a>  |
-    </nav>
+    
+<nav>
+    <a href="/">Our Home</a> |
+    <a href="/about/">Our Nannies</a> |
+    <a href="/services/">Reviews</a> |
+    <a href="{% url 'service_list' %}">Our Services</a> |
+    {% if user.is_staff %}
+        <a href="{% url 'add_service' %}">Add Service</a> |
+    {% endif %}
+    <a href="/contact/">Contact Us</a> |
+    <a href="/login/">Login</a> |
+    <a href="/register/">Register</a>
+</nav>

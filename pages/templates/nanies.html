@@ -1,27 +1,13 @@
+
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Nannies - Our Nannies</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-
-<body>
-
-<header>
-
-    <h1>Our Nannies</h1>
-{% include 'nav.html' %}
-
-</header>
-
-<main>
-
+    {% block title %}Nannies - Our Nannies{% endblock %}
+ 
+    
+{% block content %}
     <h2>Professional Childcare You Can Trust</h2>
 
-    <img src="{% static 'nanny.jpg' %}"
+    <img src="{% static 'nanny.gif' %}"
          alt="Professional and trusted nannies"
          width="400">
 
@@ -91,15 +77,4 @@
     <a href="https://www.google.com">Google</a>
     for more information.
 </p>
-
-</main>
-
-<footer>
-
-    <p>&copy; 2026 Nannies. All rights reserved.</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

@@ -1,0 +1,57 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Our Services | Nannies
+{% endblock %}
+
+{% block content %}
+
+<section class="services-page">
+
+    <h1 class="page-title">Our Services</h1>
+
+    <p class="services-intro">
+        Discover our professional childcare services
+        designed for your family.
+    </p>
+
+    <div class="services-grid">
+
+        {% for service in services %}
+
+        <div class="service-card">
+
+            <h2>{{ service.name }}</h2>
+            <p>{{ service.description }}</p>
+
+            <div class="service-details">
+
+                <h3>Service Details</h3>
+
+                {% for detail in service.servicedetail_set.all %}
+
+                <div class="detail-card">
+                    <h4>{{ detail.title }}</h4>
+                    <p>{{ detail.description }}</p>
+                </div>
+
+                {% empty %}
+                <p>No details available.</p>
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        {% empty %}
+        <p class="empty-services">
+            No services available.
+        </p>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

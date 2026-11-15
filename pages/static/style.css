@@ -184,3 +184,174 @@ footer {
     
     border-radius: 50%;
 }
+
+
+/* ==================================
+   NANI - SERVICE LIST PAGE
+   Chapter 7 - Django Database
+================================== */
+
+.services-page {
+    min-height: 75vh;
+    padding: 55px 0;
+    background-color: #f7f7fb;
+}
+
+.services-page .page-title {
+    color: #5b4bc4;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.services-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Service Cards */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(91, 75, 196, 0.15);
+}
+
+.service-card h2 {
+    color: #5b4bc4;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.service-card > p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Service Details */
+
+.service-details {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.service-details h3 {
+    color: #2f2a55;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.detail-card {
+    background-color: #f0eefb;
+    border-left: 4px solid #5b4bc4;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.detail-card h4 {
+    color: #5b4bc4;
+    margin: 0 0 8px;
+}
+
+.detail-card p {
+    color: #555;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Empty Database Message */
+
+.empty-services {
+    text-align: center;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    color: #666;
+    grid-column: 1 / -1;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-page {
+        padding: 35px 0;
+    }
+
+    .services-page .page-title {
+        font-size: 28px;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-page .page-title {
+        font-size: 24px;
+    }
+
+    .service-card h2 {
+        font-size: 21px;
+    }
+}
+
+/* Add Service Form */
+
+.add-service-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.add-service-form label {
+    display: block;
+    font-weight: bold;
+    color: #2f2a55;
+    margin-bottom: 6px;
+}
+
+.add-service-form input,
+.add-service-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.add-service-form input:focus,
+.add-service-form textarea:focus {
+    outline: 2px solid #5b4bc4;
+    border-color: #5b4bc4;
+}
+
+.add-service-form .button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-service-form .errorlist {
+    color: #c62828;
+}

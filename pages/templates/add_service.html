@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Add Service | Nannies
+{% endblock %}
+
+{% block content %}
+
+<section class="services-page">
+
+    <h1 class="page-title">Add New Service</h1>
+
+    <p class="services-intro">
+        Add a new childcare service to Nannies.
+    </p>
+
+    <div class="service-card add-service-form">
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="button">
+                Save Service
+            </button>
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}
